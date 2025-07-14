@@ -3,7 +3,7 @@ resource "aws_lambda_function" "faq_handler" {
   function_name    = "${var.project_prefix}_faq_handler"
   role             = aws_iam_role.lambda_exec.arn
   handler          = "index.handler"
-  runtime          = "nodejs18.x"
+  runtime          = "python3.x"
   source_code_hash = filebase64sha256("lambda/function.zip")
   timeout          = 10
 
