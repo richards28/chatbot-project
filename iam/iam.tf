@@ -27,6 +27,11 @@ resource "aws_iam_role_policy" "lambda_policy" {
           aws_dynamodb_table.faq.arn,
           aws_dynamodb_table.fallback_logs.arn
         ]
+        {
+        "Effect": "Allow",
+        "Principal": { "Service": "lex.amazonaws.com" },
+        "Action": "lambda:InvokeFunction"
+        }
       },
       {
         Action = "ses:SendEmail",
