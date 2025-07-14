@@ -11,7 +11,7 @@ resource "aws_lambda_function" "faq_handler" {
     variables = {
       FAQ_TABLE     = aws_dynamodb_table.faq.name
       FALLBACK_TABLE = aws_dynamodb_table.fallback_logs.name
-      SUPPORT_EMAIL = "support@example.com"
+      SUPPORT_EMAIL = "richirocks96@gmail.com"
     }
   }
 }
